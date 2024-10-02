@@ -1,10 +1,6 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-
-import streamlit as st
-import pandas as pd
-import plotly.express as px
 import os
 
 # Defina o caminho do arquivo
@@ -31,7 +27,7 @@ else:
         fig = px.histogram(car_data, x="odometer")
         
         # Exibir um gráfico Plotly interativo
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, key="histogram_button")
 
     # Crie um botão para o gráfico de dispersão
     scatter_button = st.button('Criar gráfico de dispersão')
@@ -44,18 +40,18 @@ else:
         fig = px.scatter(car_data, x="odometer", y="price")
         
         # Exibir um gráfico Plotly interativo
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, key="scatter_button")
 
     # Desafio extra: substituir botões por caixas de seleção
-    build_histogram = st.checkbox('Criar um histograma')
-    build_scatter = st.checkbox('Criar um gráfico de dispersão')
+    build_histogram = st.checkbox('Criar um histograma', key="hist_checkbox")
+    build_scatter = st.checkbox('Criar um gráfico de dispersão', key="scatter_checkbox")
 
     if build_histogram: # se a caixa de seleção for selecionada
         st.write('Criando um histograma para a coluna odometer')
         fig = px.histogram(car_data, x="odometer")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, key="hist_checkbox_plot")
 
     if build_scatter: # se a caixa de seleção for selecionada
         st.write('Criando um gráfico de dispersão para as colunas odometer e price')
         fig = px.scatter(car_data, x="odometer", y="price")
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig, use_container_width=True, key="scatter_checkbox_plot")
