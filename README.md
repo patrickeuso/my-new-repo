@@ -1,5 +1,5 @@
 # my-new-repo
-O objetivo principal deste aplicativo Streamlit é fornecer uma análise interativa dos dados de veículos. Utilizando uma interface simples e intuitiva, o aplicativo permite que os usuários explorem visualmente as informações contidas no arquivo vehicles.csv. Através de gráficos interativos, os usuários podem compreender melhor os dados sobre os veículos, como a distribuição da quilometragem (odometer) e a relação entre a quilometragem e o preço.
+O objetivo principal deste aplicativo Streamlit é fornecer uma análise interativa dos dados de veículos - através da URL: https://my-new-repo-2u67.onrender.com/. Utilizando uma interface simples e intuitiva, o aplicativo permite que os usuários explorem visualmente as informações contidas no arquivo vehicles.csv. Através de gráficos interativos, os usuários podem compreender melhor os dados sobre os veículos, como a distribuição da quilometragem (odometer) e a relação entre a quilometragem e o preço.
 
 Primeiro, o aplicativo verifica se o arquivo de dados existe no caminho especificado. Caso o arquivo não seja encontrado, uma mensagem de erro é exibida. Se o arquivo estiver presente, os dados são carregados em um DataFrame do Pandas. Isso garante que todos os dados necessários estejam disponíveis para as análises subsequentes.
 
